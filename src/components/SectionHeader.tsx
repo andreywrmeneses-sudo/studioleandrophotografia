@@ -31,7 +31,11 @@ export function SectionHeader({
         {title}
       </h2>
       {text && (
-        <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+        <p
+          className={`mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg ${
+            align === "center" ? "mx-auto text-center" : ""
+          }`}
+        >
           {text}
         </p>
       )}
