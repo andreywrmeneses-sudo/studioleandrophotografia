@@ -4,6 +4,18 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --color-cyan-signature: oklch(0.83 0.14 213);
+  --color-cyan-deep: oklch(0.55 0.1 216);
+  --color-midnight: oklch(0.27 0.03 197);
+  --color-graphite: oklch(0.19 0 0);
+  --color-gold: oklch(0.81 0.13 78);
+  --color-mist: oklch(0.97 0.004 210);
+  --color-ash: oklch(0.71 0.014 220);
+}
+
 /*
  * Design system definition.
  *
@@ -62,26 +74,26 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --radius: 0.5rem;
+  --background: oklch(0.19 0 0);
+  --foreground: oklch(1 0 0);
+  --card: oklch(0.22 0.008 210);
+  --card-foreground: oklch(1 0 0);
+  --popover: oklch(0.19 0 0);
+  --popover-foreground: oklch(1 0 0);
+  --primary: oklch(0.83 0.14 213);
+  --primary-foreground: oklch(0.16 0.02 210);
+  --secondary: oklch(0.55 0.1 216);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.27 0.03 197);
+  --muted-foreground: oklch(0.71 0.014 220);
+  --accent: oklch(0.27 0.03 197);
+  --accent-foreground: oklch(0.83 0.14 213);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.83 0.14 213);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -140,5 +152,111 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background: var(--color-cyan-signature);
+    color: var(--color-graphite);
+  }
+}
+
+@utility glass {
+  background: color-mix(in oklab, white 7%, transparent);
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid color-mix(in oklab, white 12%, transparent);
+  box-shadow:
+    0 1px 0 0 color-mix(in oklab, white 14%, transparent) inset,
+    0 18px 50px -24px oklch(0 0 0 / 0.8);
+}
+
+@utility glass-hover {
+  transition:
+    background 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    transform 0.4s ease;
+  &:hover {
+    background: color-mix(in oklab, white 12%, transparent);
+    border-color: color-mix(in oklab, var(--color-cyan-signature) 38%, transparent);
+    box-shadow:
+      0 1px 0 0 color-mix(in oklab, white 20%, transparent) inset,
+      0 0 0 1px color-mix(in oklab, var(--color-cyan-signature) 12%, transparent),
+      0 22px 60px -28px color-mix(in oklab, var(--color-cyan-signature) 55%, transparent);
+    transform: translateY(-2px);
+  }
+}
+
+@utility text-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
+  line-height: 0.98;
+}
+
+@utility eyebrow {
+  font-size: 0.6875rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-ash);
+}
+
+@utility hairline {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in oklab, var(--color-cyan-signature) 45%, transparent),
+    transparent
+  );
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--color-cyan-signature) 45%, transparent);
+  }
+  70% {
+    box-shadow: 0 0 0 14px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@keyframes blur-in {
+  from {
+    opacity: 0;
+    filter: blur(14px);
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 }
