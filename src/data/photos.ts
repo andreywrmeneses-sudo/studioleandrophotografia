@@ -33,6 +33,8 @@ export type Photo = {
   featured?: boolean;
   /** "cover" preenche a caixa focando no centro; padrão mostra a foto inteira */
   fit?: "cover" | "contain";
+  /** ponto de foco quando fit = "cover" (ex.: "object-top") */
+  focus?: string;
 };
 
 export const heroPhoto = hero;
@@ -125,6 +127,8 @@ export const eventsPhotos: Photo[] = [
     category: "Eventos",
     title: "Família",
     caption: "Conexão.",
+    fit: "cover",
+    focus: "object-[50%_35%]",
   },
 ];
 
@@ -182,7 +186,7 @@ export const bestOfMonthPhotos: Photo[] = [
   pick(beyondPhotos, 1, "mes-6"),
   pick(sportsPhotos, 4, "mes-7"),
   pick(eventsPhotos, 4, "mes-8"),
-  { ...pick(beyondPhotos, 3, "mes-9", true), fit: "cover" },
+  { ...pick(beyondPhotos, 3, "mes-9", true), fit: "cover", focus: "object-[50%_18%]" },
 ];
 
 export const CONTACT = {
