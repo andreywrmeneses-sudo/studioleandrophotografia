@@ -38,7 +38,7 @@ export function Header() {
       <div className="relative mx-auto flex max-w-[1400px] items-center justify-between gap-4 px-4 sm:px-8">
         <a
           href="#inicio"
-          className="group flex min-w-0 shrink-0 items-center"
+          className="group flex min-w-0 shrink-0 items-center rounded-full bg-black/55 px-4 py-1.5 backdrop-blur-md backdrop-saturate-150"
           aria-label="Studio Leandro Photografia — ir para o início"
         >
           <img
@@ -49,7 +49,7 @@ export function Header() {
         </a>
 
         <nav
-          className={`glass pointer-events-auto absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 rounded-full px-2 py-1.5 lg:flex ${
+          className={`pointer-events-auto absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 rounded-full border border-white/8 bg-black/55 px-2 py-1.5 backdrop-blur-md backdrop-saturate-150 lg:flex ${
             scrolled ? "shadow-lg" : ""
           }`}
           aria-label="Navegação principal"
@@ -68,7 +68,7 @@ export function Header() {
         <div className="flex items-center justify-end gap-3">
           <a
             href="#contato"
-            className="glass glass-hover hidden rounded-full px-5 py-2.5 text-[13px] text-foreground lg:block"
+            className="hidden rounded-full border border-white/8 bg-black/55 px-5 py-2.5 text-[13px] text-foreground backdrop-blur-md backdrop-saturate-150 transition-colors duration-300 hover:border-primary/40 hover:text-primary lg:block"
           >
             Solicitar orçamento
           </a>
