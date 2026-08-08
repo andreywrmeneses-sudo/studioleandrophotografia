@@ -44,7 +44,7 @@ export function Header() {
           <img
             src={logo.url}
             alt="Studio Leandro Photografia"
-            className={`w-auto transition-all duration-500 ${scrolled ? "h-9 sm:h-10" : "h-10 sm:h-14"}`}
+            className={`w-auto transition-all duration-500 ${scrolled ? "h-7 sm:h-8" : "h-8 sm:h-11"}`}
           />
         </a>
 

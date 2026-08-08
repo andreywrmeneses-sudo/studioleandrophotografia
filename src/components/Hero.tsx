@@ -27,14 +27,8 @@ export function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(90%_60%_at_50%_40%,transparent,color-mix(in_oklab,var(--color-graphite)_70%,transparent))]" />
 
       <div className="relative mx-auto flex h-full max-w-[1400px] flex-col justify-end px-4 pb-20 sm:px-8 sm:pb-24">
-        <p
-          className="eyebrow text-primary"
-          style={{ animation: "blur-in .9s cubic-bezier(.2,.7,.2,1) .1s both" }}
-        >
-          Studio Leandro Photografia
-        </p>
         <h1
-          className="text-display mt-6 max-w-4xl text-[clamp(2.4rem,7.5vw,5.6rem)] font-bold text-foreground"
+          className="text-display max-w-4xl text-[clamp(2.4rem,7.5vw,5.6rem)] font-bold text-foreground"
           style={{ animation: "blur-in 1.1s cubic-bezier(.2,.7,.2,1) .25s both" }}
         >
           Momentos que merecem ser eternizados.
