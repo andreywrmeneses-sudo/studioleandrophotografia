@@ -159,16 +159,22 @@ export const beyondPhotos: Photo[] = [
   },
 ];
 
+const pick = (list: Photo[], i: number, id: string, featured = false): Photo => ({
+  ...(list[i] as Photo),
+  id,
+  featured,
+});
+
 export const bestOfMonthPhotos: Photo[] = [
-  { ...sportsPhotos[0], id: "mes-1", featured: true },
-  { ...eventsPhotos[0], id: "mes-2" },
-  { ...beyondPhotos[0], id: "mes-3", featured: true },
-  { ...sportsPhotos[2], id: "mes-4" },
-  { ...eventsPhotos[2], id: "mes-5" },
-  { ...beyondPhotos[1], id: "mes-6" },
-  { ...sportsPhotos[4], id: "mes-7" },
-  { ...eventsPhotos[4], id: "mes-8" },
-  { ...beyondPhotos[3], id: "mes-9", featured: true },
+  pick(sportsPhotos, 0, "mes-1", true),
+  pick(eventsPhotos, 0, "mes-2"),
+  pick(beyondPhotos, 0, "mes-3", true),
+  pick(sportsPhotos, 2, "mes-4"),
+  pick(eventsPhotos, 2, "mes-5"),
+  pick(beyondPhotos, 1, "mes-6"),
+  pick(sportsPhotos, 4, "mes-7"),
+  pick(eventsPhotos, 4, "mes-8"),
+  pick(beyondPhotos, 3, "mes-9", true),
 ];
 
 export const CONTACT = {
