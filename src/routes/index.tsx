@@ -104,6 +104,7 @@ function Index() {
             index="01"
             eyebrow="O Studio"
             title="Mais do que fotografar. Contar histórias."
+            text="O trabalho do Studio Leandro Photografia nasce da atenção ao que acontece entre um quadro e outro: a emoção, o movimento, a personalidade de quem está diante da lente, os detalhes que passam despercebidos e os momentos espontâneos que ninguém planeja."
           />
 
           <div className="mt-16 grid gap-8 lg:grid-cols-[1.35fr_1fr] lg:items-end">
@@ -120,12 +121,6 @@ function Index() {
 
             <Reveal delay={140}>
               <div className="flex flex-col gap-8">
-                <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-                  O trabalho do Studio Leandro Photografia nasce da atenção ao que acontece entre um
-                  quadro e outro: a emoção, o movimento, a personalidade de quem está diante da
-                  lente, os detalhes que passam despercebidos e os momentos espontâneos que ninguém
-                  planeja.
-                </p>
                 <figure className="group overflow-hidden rounded-3xl">
                   <img
                     src={eventsPhotos[2]?.src}

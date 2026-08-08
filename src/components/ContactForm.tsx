@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Check, Send } from "lucide-react";
 import { CONTACT } from "@/data/photos";
 
-type Errors = { nome?: string; email?: string; proposta?: string };
+type Errors = { nome?: string; email?: string; proposta?: string; consent?: string };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -10,6 +10,7 @@ export function ContactForm() {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [proposta, setProposta] = useState("");
+  const [consent, setConsent] = useState(false);
   const [errors, setErrors] = useState<Errors>({});
   const [sent, setSent] = useState(false);
 
@@ -24,6 +25,8 @@ export function ContactForm() {
     else if (!EMAIL_RE.test(m) || m.length > 255) e.email = "Informe um e-mail válido.";
     if (!p) e.proposta = "Descreva sua proposta de foto.";
     else if (p.length > 1500) e.proposta = "A proposta deve ter no máximo 1500 caracteres.";
+    if (!consent)
+      e.consent = "É necessário aceitar os termos de uso de dados (LGPD) para enviar.";
     return e;
   };
 
@@ -74,6 +77,7 @@ export function ContactForm() {
               setNome("");
               setEmail("");
               setProposta("");
+              setConsent(false);
             }}
             className="glass glass-hover rounded-full px-6 py-3 text-sm text-foreground"
           >
@@ -156,9 +160,41 @@ export function ContactForm() {
         </div>
       </div>
 
+      <div className="mt-6 rounded-2xl border border-white/12 bg-white/5 p-5">
+        <span className="eyebrow block text-primary">Termos de aceitação — LGPD</span>
+        <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+          Ao enviar sua proposta, seus dados (nome, e-mail e a descrição enviada) serão utilizados
+          exclusivamente para que o Studio Leandro Photografia entre em contato e elabore o
+          orçamento solicitado. Não compartilhamos suas informações com terceiros e você pode
+          solicitar a correção ou exclusão dos seus dados a qualquer momento, conforme a Lei Geral
+          de Proteção de Dados (Lei nº 13.709/2018).
+        </p>
+        <label htmlFor="consent" className="mt-4 flex cursor-pointer items-start gap-3">
+          <input
+            id="consent"
+            name="consent"
+            type="checkbox"
+            checked={consent}
+            onChange={(e) => setConsent(e.target.checked)}
+            aria-invalid={!!errors.consent}
+            aria-describedby={errors.consent ? "erro-consent" : undefined}
+            className="mt-0.5 h-4 w-4 shrink-0 rounded border border-white/25 bg-white/10 accent-[var(--color-cyan-signature)]"
+          />
+          <span className="text-xs leading-relaxed text-foreground">
+            Li e aceito os termos de uso e tratamento dos meus dados pessoais.
+          </span>
+        </label>
+        {errors.consent && (
+          <p id="erro-consent" className="mt-2 text-xs text-destructive">
+            {errors.consent}
+          </p>
+        )}
+      </div>
+
       <button
         type="submit"
-        className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground shadow-[0_18px_50px_-20px_var(--color-cyan-signature)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary hover:text-foreground focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none sm:w-auto"
+        disabled={!consent}
+        className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground shadow-[0_18px_50px_-20px_var(--color-cyan-signature)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary hover:text-foreground focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:bg-primary disabled:hover:text-primary-foreground sm:w-auto"
       >
         <Send className="h-4 w-4" />
         Enviar proposta
