@@ -64,7 +64,7 @@ export function Footer() {
                 className="flex items-start gap-3 text-muted-foreground transition-colors duration-300 hover:text-primary"
               >
                 <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                <span className="tracking-[0.4em]">•••</span>
+                <span>{CONTACT.whatsappLabel}</span>
               </a>
             </li>
             <li>
