@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Menu, X, Camera } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png.asset.json";
 
 const NAV = [
   { label: "Início", href: "#inicio" },
@@ -34,25 +35,25 @@ export function Header() {
         scrolled ? "py-3" : "py-5"
       }`}
     >
-      <div className="mx-auto grid max-w-[1400px] grid-cols-[auto_1fr] items-center gap-4 px-4 sm:px-8">
+      <div className="relative mx-auto flex max-w-[1400px] items-center justify-between gap-4 px-4 sm:px-8">
         <a
           href="#inicio"
-          className="group flex min-w-0 items-center gap-2 text-primary"
+          className="group flex min-w-0 shrink-0 items-center"
           aria-label="Studio Leandro Photografia — ir para o início"
         >
-          <Camera className="h-5 w-5 shrink-0 transition-transform duration-500 group-hover:rotate-6" />
-          <span className="text-display truncate text-sm font-bold tracking-tight sm:text-base lg:hidden">
-            Studio Leandro
-          </span>
+          <img
+            src={logo.url}
+            alt="Studio Leandro Photografia"
+            className={`w-auto transition-all duration-500 ${scrolled ? "h-12 sm:h-14" : "h-14 sm:h-20"}`}
+          />
         </a>
 
-        <div className="flex items-center justify-end gap-3">
-          <nav
-            className={`glass hidden items-center gap-1 rounded-full px-2 py-1.5 lg:flex ${
-              scrolled ? "shadow-lg" : ""
-            }`}
-            aria-label="Navegação principal"
-          >
+        <nav
+          className={`glass pointer-events-auto absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 rounded-full px-2 py-1.5 lg:flex ${
+            scrolled ? "shadow-lg" : ""
+          }`}
+          aria-label="Navegação principal"
+        >
             {NAV.map((item) => (
               <a
                 key={item.href}
@@ -62,18 +63,15 @@ export function Header() {
                 {item.label}
               </a>
             ))}
-          </nav>
+        </nav>
 
+        <div className="flex items-center justify-end gap-3">
           <a
-            href="#inicio"
-            className="text-display hidden shrink-0 text-right text-base leading-tight font-bold text-foreground lg:block"
+            href="#contato"
+            className="glass glass-hover hidden rounded-full px-5 py-2.5 text-[13px] text-foreground lg:block"
           >
-            Studio Leandro
-            <span className="block text-[11px] font-medium tracking-[0.3em] text-primary uppercase">
-              Photografia
-            </span>
+            Solicitar orçamento
           </a>
-
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}

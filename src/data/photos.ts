@@ -1,9 +1,9 @@
 import hero from "@/assets/hero.jpg";
-import sport1 from "@/assets/sport-1.jpg";
-import sport2 from "@/assets/sport-2.jpg";
-import sport3 from "@/assets/sport-3.jpg";
-import sport4 from "@/assets/sport-4.jpg";
-import sport5 from "@/assets/sport-5.jpg";
+import run1 from "@/assets/run-1.webp.asset.json";
+import run2 from "@/assets/run-2.webp.asset.json";
+import run3 from "@/assets/run-3.webp.asset.json";
+import run4 from "@/assets/run-4.webp.asset.json";
+import run5 from "@/assets/run-5.webp.asset.json";
 import event1 from "@/assets/event-1.jpg";
 import event2 from "@/assets/event-2.jpg";
 import event3 from "@/assets/event-3.jpg";
@@ -38,43 +38,43 @@ export const editorialPhoto = other4;
 export const sportsPhotos: Photo[] = [
   {
     id: "esp-1",
-    src: sport1,
-    alt: "Jogador de futebol no ar chutando a bola sob refletores",
+    src: run2.url,
+    alt: "Corredor sorrindo com os braços erguidos durante a Corrida Corre Raposa",
     category: "Esportes",
-    title: "O instante decisivo",
-    caption: "O instante decisivo.",
+    title: "A alegria da chegada",
+    caption: "A alegria da chegada.",
   },
   {
     id: "esp-2",
-    src: sport2,
-    alt: "Atleta de atletismo disparando dos blocos de largada",
+    src: run4.url,
+    alt: "Atleta em ritmo forte na avenida durante prova de rua",
     category: "Esportes",
-    title: "Velocidade",
-    caption: "Velocidade.",
+    title: "Ritmo",
+    caption: "Ritmo.",
   },
   {
     id: "esp-3",
-    src: sport3,
-    alt: "Jogador de basquete enterrando a bola em quadra escura",
+    src: run1.url,
+    alt: "Corredor concentrado no esforço final da prova",
     category: "Esportes",
-    title: "Precisão",
-    caption: "Precisão.",
+    title: "Esforço",
+    caption: "Esforço.",
   },
   {
     id: "esp-4",
-    src: sport4,
-    alt: "Retrato emocionado de atleta após a vitória",
-    category: "Esportes",
-    title: "Emoção",
-    caption: "Emoção.",
-  },
-  {
-    id: "esp-5",
-    src: sport5,
-    alt: "Ciclista em alta velocidade em pista molhada à noite",
+    src: run3.url,
+    alt: "Corredora comemorando de braços abertos ao cruzar o percurso",
     category: "Esportes",
     title: "Superação",
     caption: "Superação.",
+  },
+  {
+    id: "esp-5",
+    src: run5.url,
+    alt: "Duas participantes abraçadas e sorrindo após a corrida",
+    category: "Esportes",
+    title: "Celebração",
+    caption: "Celebração.",
   },
 ];
 

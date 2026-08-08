@@ -27,12 +27,21 @@ export function GalleryCarousel({
   const [paused, setPaused] = useState(false);
   const [lightbox, setLightbox] = useState<number | null>(null);
 
-  const scrollTo = useCallback((i: number) => {
-    const track = trackRef.current;
-    const child = track?.children[i] as HTMLElement | undefined;
-    if (!track || !child) return;
-    track.scrollTo({ left: child.offsetLeft - track.offsetLeft, behavior: "smooth" });
-  }, []);
+  const total = photos.length;
+
+  const scrollTo = useCallback(
+    (i: number) => {
+      const track = trackRef.current;
+      if (!track) return;
+      const index = ((i % total) + total) % total;
+      const child = track.children[index] as HTMLElement | undefined;
+      if (!child) return;
+      const left = child.offsetLeft - track.offsetLeft;
+      track.scrollTo({ left, behavior: "smooth" });
+      setActive(index);
+    },
+    [total],
+  );
 
   useEffect(() => {
     const track = trackRef.current;
@@ -124,7 +133,7 @@ export function GalleryCarousel({
         <button
           type="button"
           aria-label="Fotografia anterior"
-          onClick={() => scrollTo(Math.max(0, active - 1))}
+          onClick={() => scrollTo(active - 1)}
           className="glass glass-hover grid h-11 w-11 place-items-center rounded-full text-foreground"
         >
           <ArrowLeft className="h-4 w-4" />
@@ -132,7 +141,7 @@ export function GalleryCarousel({
         <button
           type="button"
           aria-label="Próxima fotografia"
-          onClick={() => scrollTo(Math.min(photos.length - 1, active + 1))}
+          onClick={() => scrollTo(active + 1)}
           className="glass glass-hover grid h-11 w-11 place-items-center rounded-full text-foreground"
         >
           <ArrowRight className="h-4 w-4" />
