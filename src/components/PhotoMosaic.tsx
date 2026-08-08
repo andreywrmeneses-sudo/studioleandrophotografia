@@ -47,7 +47,9 @@ export function PhotoMosaic({ photos }: { photos: Photo[] }) {
                 loading="lazy"
                 decoding="async"
                 className={`relative h-full w-full transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04] ${
-                  photo.fit === "cover" ? "object-cover object-center" : "object-contain object-top"
+                  photo.fit === "cover"
+                    ? `object-cover ${photo.focus ?? "object-center"}`
+                    : "object-contain object-top"
                 }`}
               />
               <span className="absolute inset-0 bg-graphite/25 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
