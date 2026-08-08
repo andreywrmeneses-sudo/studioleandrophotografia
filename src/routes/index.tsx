@@ -21,6 +21,7 @@ import {
   editorialPhoto,
   eventsPhotos,
   sportsPhotos,
+  weddingHero,
 } from "@/data/photos";
 
 const TITLE = "Studio Leandro Photografia | Fotografia Profissional";
