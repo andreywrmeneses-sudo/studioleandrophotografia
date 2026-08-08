@@ -10,10 +10,11 @@ import wed3 from "@/assets/casamento-3.jpg.asset.json";
 import wed4 from "@/assets/casamento-4.jpg.asset.json";
 import wed5 from "@/assets/casamento-5.webp.asset.json";
 import heroic from "@/assets/hero-bombeiro.jpg.asset.json";
-import other1 from "@/assets/other-1.jpg";
-import other2 from "@/assets/other-2.jpg";
-import other3 from "@/assets/other-3.jpg";
-import other4 from "@/assets/other-4.jpg";
+import mar1 from "@/assets/maratona-1.webp.asset.json";
+import mar2 from "@/assets/maratona-2.webp.asset.json";
+import mar3 from "@/assets/maratona-3.webp.asset.json";
+import mar4 from "@/assets/maratona-4.webp.asset.json";
+import mar5 from "@/assets/maratona-5.webp.asset.json";
 import studio from "@/assets/studio.jpg";
 
 /**
@@ -126,38 +127,38 @@ export const eventsPhotos: Photo[] = [
 export const beyondPhotos: Photo[] = [
   {
     id: "alm-1",
-    src: other1,
-    alt: "Retrato de estúdio com meia luz e sombra marcada",
-    category: "Retratos",
-    title: "Retrato em contraluz",
+    src: mar3.url,
+    alt: "Três corredoras sorrindo com suas medalhas após a Corrida do Fogo",
+    category: "Maratona",
+    title: "Medalhas conquistadas",
   },
   {
     id: "alm-2",
-    src: other2,
-    alt: "Fotografia urbana noturna com reflexos de neon na chuva",
-    category: "Urbano",
-    title: "Cidade molhada",
+    src: mar5.url,
+    alt: "Corredora comemorando com a medalha sob os jatos d'água na chegada",
+    category: "Maratona",
+    title: "A chegada",
   },
   {
     id: "alm-3",
-    src: other3,
-    alt: "Casal sorrindo em terraço durante o pôr do sol",
-    category: "Lifestyle",
-    title: "Golden hour",
+    src: mar4.url,
+    alt: "Corredor comemorando de braços erguidos ao cruzar o pórtico de chegada",
+    category: "Maratona",
+    title: "Braços para o alto",
   },
   {
     id: "alm-4",
-    src: other4,
-    alt: "Mãos segurando câmera analógica em preto e branco",
-    category: "Ensaios",
-    title: "Ofício",
+    src: mar1.url,
+    alt: "Atleta veterana no pódio exibindo a medalha da Corrida do Fogo",
+    category: "Maratona",
+    title: "Pódio",
   },
   {
     id: "alm-5",
-    src: studio,
-    alt: "Interior do estúdio fotográfico com iluminação profissional",
-    category: "Projetos especiais",
-    title: "Bastidores",
+    src: mar2.url,
+    alt: "Casal de corredores abraçados exibindo as medalhas após a prova",
+    category: "Maratona",
+    title: "Juntos na linha de chegada",
   },
 ];
 
