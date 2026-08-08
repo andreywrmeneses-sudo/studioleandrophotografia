@@ -8,7 +8,7 @@ type Variant = "wide" | "portrait" | "offset";
 const ratio: Record<Variant, string> = {
   wide: "aspect-[16/10]",
   portrait: "aspect-[4/5]",
-  offset: "aspect-[3/2]",
+  offset: "aspect-[4/5]",
 };
 
 export function GalleryCarousel({
