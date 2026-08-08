@@ -16,12 +16,15 @@ export function GalleryCarousel({
   variant = "wide",
   autoplay = false,
   variantArrows = "default",
+  step = 2,
   label,
 }: {
   photos: Photo[];
   variant?: Variant;
   autoplay?: boolean;
   variantArrows?: "default" | "prominent";
+  /** quantas fotos avançam por clique nas setas */
+  step?: number;
   label: string;
 }) {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -146,7 +149,7 @@ export function GalleryCarousel({
           <button
             type="button"
             aria-label="Fotografia anterior"
-            onClick={() => scrollTo(active - 1)}
+            onClick={() => scrollTo(active - step)}
             className="glass glass-hover absolute top-1/2 left-3 z-10 hidden h-14 w-14 -translate-y-1/2 place-items-center rounded-full border border-primary/40 text-foreground shadow-[0_0_36px_-10px_var(--color-cyan-signature)] sm:grid"
           >
             <ArrowLeft className="h-6 w-6 text-primary" />
@@ -154,7 +157,7 @@ export function GalleryCarousel({
           <button
             type="button"
             aria-label="Próxima fotografia"
-            onClick={() => scrollTo(active + 1)}
+            onClick={() => scrollTo(active + step)}
             className="glass glass-hover absolute top-1/2 right-6 z-10 hidden h-14 w-14 -translate-y-1/2 place-items-center rounded-full border border-primary/40 text-foreground shadow-[0_0_36px_-10px_var(--color-cyan-signature)] sm:grid"
           >
             <ArrowRight className="h-6 w-6 text-primary" />
@@ -166,7 +169,7 @@ export function GalleryCarousel({
         <button
           type="button"
           aria-label="Fotografia anterior"
-          onClick={() => scrollTo(active - 1)}
+          onClick={() => scrollTo(active - step)}
           className={`glass glass-hover grid place-items-center rounded-full text-foreground ${variantArrows === "prominent" ? "h-14 w-14 border border-primary/40" : "h-11 w-11"}`}
         >
           <ArrowLeft className={variantArrows === "prominent" ? "h-5 w-5 text-primary" : "h-4 w-4"} />
@@ -174,7 +177,7 @@ export function GalleryCarousel({
         <button
           type="button"
           aria-label="Próxima fotografia"
-          onClick={() => scrollTo(active + 1)}
+          onClick={() => scrollTo(active + step)}
           className={`glass glass-hover grid place-items-center rounded-full text-foreground ${variantArrows === "prominent" ? "h-14 w-14 border border-primary/40" : "h-11 w-11"}`}
         >
           <ArrowRight className={variantArrows === "prominent" ? "h-5 w-5 text-primary" : "h-4 w-4"} />
