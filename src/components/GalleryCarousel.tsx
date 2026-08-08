@@ -133,7 +133,7 @@ export function GalleryCarousel({
         <button
           type="button"
           aria-label="Fotografia anterior"
-          onClick={() => scrollTo(Math.max(0, active - 1))}
+          onClick={() => scrollTo(active - 1)}
           className="glass glass-hover grid h-11 w-11 place-items-center rounded-full text-foreground"
         >
           <ArrowLeft className="h-4 w-4" />
@@ -141,7 +141,7 @@ export function GalleryCarousel({
         <button
           type="button"
           aria-label="Próxima fotografia"
-          onClick={() => scrollTo(Math.min(photos.length - 1, active + 1))}
+          onClick={() => scrollTo(active + 1)}
           className="glass glass-hover grid h-11 w-11 place-items-center rounded-full text-foreground"
         >
           <ArrowRight className="h-4 w-4" />
