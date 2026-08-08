@@ -46,7 +46,9 @@ export function PhotoMosaic({ photos }: { photos: Photo[] }) {
                 alt={photo.alt}
                 loading="lazy"
                 decoding="async"
-                className="relative h-full w-full object-contain object-top transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]"
+                className={`relative h-full w-full transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04] ${
+                  photo.fit === "cover" ? "object-cover object-center" : "object-contain object-top"
+                }`}
               />
               <span className="absolute inset-0 bg-graphite/25 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <span className="absolute inset-0 rounded-xl ring-0 ring-primary/0 transition-all duration-500 group-hover:ring-1 group-hover:ring-primary/45 group-hover:shadow-[0_0_46px_-12px_var(--color-cyan-signature)]" />

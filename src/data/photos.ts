@@ -181,7 +181,7 @@ export const bestOfMonthPhotos: Photo[] = [
   pick(beyondPhotos, 1, "mes-6"),
   pick(sportsPhotos, 4, "mes-7"),
   pick(eventsPhotos, 4, "mes-8"),
-  pick(beyondPhotos, 3, "mes-9", true),
+  { ...pick(beyondPhotos, 3, "mes-9", true), fit: "cover" },
 ];
 
 export const CONTACT = {
