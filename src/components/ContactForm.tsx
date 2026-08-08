@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Check, Send } from "lucide-react";
 import { CONTACT } from "@/data/photos";
 
-type Errors = { nome?: string; email?: string; proposta?: string };
+type Errors = { nome?: string; email?: string; proposta?: string; consent?: string };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -10,6 +10,7 @@ export function ContactForm() {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [proposta, setProposta] = useState("");
+  const [consent, setConsent] = useState(false);
   const [errors, setErrors] = useState<Errors>({});
   const [sent, setSent] = useState(false);
 
@@ -24,6 +25,8 @@ export function ContactForm() {
     else if (!EMAIL_RE.test(m) || m.length > 255) e.email = "Informe um e-mail válido.";
     if (!p) e.proposta = "Descreva sua proposta de foto.";
     else if (p.length > 1500) e.proposta = "A proposta deve ter no máximo 1500 caracteres.";
+    if (!consent)
+      e.consent = "É necessário aceitar os termos de uso de dados (LGPD) para enviar.";
     return e;
   };
 
@@ -74,6 +77,7 @@ export function ContactForm() {
               setNome("");
               setEmail("");
               setProposta("");
+              setConsent(false);
             }}
             className="glass glass-hover rounded-full px-6 py-3 text-sm text-foreground"
           >
