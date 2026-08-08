@@ -119,7 +119,9 @@ export function GalleryCarousel({
                 loading="lazy"
                 decoding="async"
                 className={`relative h-full w-full transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03] ${
-                  photo.fit === "cover" ? "object-cover object-center" : "object-contain object-top"
+                  photo.fit === "cover"
+                    ? `object-cover ${photo.focus ?? "object-center"}`
+                    : "object-contain object-top"
                 }`}
               />
               <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-graphite/70 via-transparent to-transparent" />
