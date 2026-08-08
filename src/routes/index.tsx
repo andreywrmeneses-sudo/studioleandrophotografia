@@ -199,7 +199,7 @@ function Index() {
               <figure className="overflow-hidden rounded-3xl">
                 <img
                   src={editorialPhoto}
-                  alt="Mãos experientes segurando uma câmera analógica em preto e branco"
+                  alt="Bombeira militar sendo resfriada com água após uma prova de resistência"
                   loading="lazy"
                   className="aspect-[4/5] w-full object-cover"
                 />
@@ -207,13 +207,15 @@ function Index() {
             </Reveal>
             <Reveal delay={120}>
               <div>
-                <span className="eyebrow text-primary">Entre uma história e outra</span>
+                <span className="eyebrow text-primary">Coragem em cada quadro</span>
                 <p className="text-display mt-6 text-3xl leading-tight text-foreground sm:text-4xl lg:text-5xl">
-                  A luz muda, o assunto muda — o olhar permanece o mesmo.
+                  Uma ação de humanidade, registrada eternamente no tempo.
                 </p>
                 <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground">
-                  Da linha lateral de um jogo ao silêncio de um salão antes da cerimônia, a busca é
-                  sempre a mesma: encontrar o instante em que tudo se organiza.
+                  Existem gestos que duram segundos e significam uma vida inteira. A fotografia é o
+                  que impede que eles se percam: o esforço até o limite, o socorro que chega, a mão
+                  estendida a quem precisa. Registrar atos heroicos é transformar coragem em memória
+                  — imagens que honram quem age quando ninguém está olhando.
                 </p>
                 <a
                   href="#contato"
@@ -241,8 +243,8 @@ function Index() {
             <Reveal delay={120}>
               <figure className="mt-16 overflow-hidden rounded-3xl">
                 <img
-                  src={eventsPhotos[0]?.src}
-                  alt="Noivos abraçados durante a celebração em luz dourada"
+                  src={weddingHero}
+                  alt="Noivos se olhando com carinho durante a cerimônia, cercados pela família"
                   loading="lazy"
                   className="aspect-[21/9] w-full object-cover"
                 />
@@ -378,8 +380,8 @@ function Index() {
                 <MessageCircle className="mt-1 h-5 w-5 shrink-0 text-primary" />
                 <span className="min-w-0">
                   <span className="eyebrow block">WhatsApp</span>
-                  <span className="mt-2 block text-sm text-foreground">
-                    {CONTACT.whatsappLabel}
+                  <span className="mt-2 block text-center text-lg tracking-[0.4em] text-foreground">
+                    •••
                   </span>
                 </span>
               </a>
