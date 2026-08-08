@@ -35,7 +35,7 @@ export function Header() {
         scrolled ? "py-3" : "py-5"
       }`}
     >
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-4 px-4 sm:px-8">
+      <div className="relative mx-auto flex max-w-[1400px] items-center justify-between gap-4 px-4 sm:px-8">
         <a
           href="#inicio"
           className="group flex min-w-0 shrink-0 items-center"

@@ -27,12 +27,21 @@ export function GalleryCarousel({
   const [paused, setPaused] = useState(false);
   const [lightbox, setLightbox] = useState<number | null>(null);
 
-  const scrollTo = useCallback((i: number) => {
-    const track = trackRef.current;
-    const child = track?.children[i] as HTMLElement | undefined;
-    if (!track || !child) return;
-    track.scrollTo({ left: child.offsetLeft - track.offsetLeft, behavior: "smooth" });
-  }, []);
+  const total = photos.length;
+
+  const scrollTo = useCallback(
+    (i: number) => {
+      const track = trackRef.current;
+      if (!track) return;
+      const index = ((i % total) + total) % total;
+      const child = track.children[index] as HTMLElement | undefined;
+      if (!child) return;
+      const left = child.offsetLeft - track.offsetLeft;
+      track.scrollTo({ left, behavior: "smooth" });
+      setActive(index);
+    },
+    [total],
+  );
 
   useEffect(() => {
     const track = trackRef.current;
