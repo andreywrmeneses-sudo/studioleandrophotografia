@@ -163,6 +163,7 @@ export const beyondPhotos: Photo[] = [
     alt: "Casal de corredores abraçados exibindo as medalhas após a prova",
     category: "Maratona",
     title: "Juntos na linha de chegada",
+    fit: "cover",
   },
 ];
 

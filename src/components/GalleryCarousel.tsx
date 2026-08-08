@@ -16,12 +16,15 @@ export function GalleryCarousel({
   variant = "wide",
   autoplay = false,
   variantArrows = "default",
+  step = 2,
   label,
 }: {
   photos: Photo[];
   variant?: Variant;
   autoplay?: boolean;
   variantArrows?: "default" | "prominent";
+  /** quantas fotos avançam por clique nas setas */
+  step?: number;
   label: string;
 }) {
   const trackRef = useRef<HTMLDivElement>(null);
