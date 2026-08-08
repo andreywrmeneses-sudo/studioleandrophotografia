@@ -176,17 +176,14 @@ function Index() {
             items={[
               {
                 quote: "Fotos que realmente conseguiram transmitir a energia daquele momento.",
-                name: "Nome do cliente",
                 context: "Cobertura esportiva",
               },
               {
                 quote: "Cada detalhe ficou incrível. O resultado superou minhas expectativas.",
-                name: "Nome do cliente",
                 context: "Campeonato",
               },
               {
                 quote: "Profissionalismo do início ao fim.",
-                name: "Nome do cliente",
                 context: "Equipe esportiva",
               },
             ]}
@@ -265,17 +262,14 @@ function Index() {
                 items={[
                   {
                     quote: "Sentimos que o dia foi contado exatamente como ele aconteceu.",
-                    name: "Nome do cliente",
                     context: "Casamento",
                   },
                   {
                     quote: "As fotos guardaram detalhes que a gente nem percebeu na hora.",
-                    name: "Nome do cliente",
                     context: "Aniversário",
                   },
                   {
                     quote: "Discrição total durante a festa e um resultado impecável.",
-                    name: "Nome do cliente",
                     context: "Evento social",
                   },
                 ]}

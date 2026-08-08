@@ -6,7 +6,7 @@ const LINKS = [
   { label: "Início", href: "#inicio" },
   { label: "Esportes", href: "#esportes" },
   { label: "Eventos", href: "#eventos" },
-  { label: "Portfólio", href: "#portfolio" },
+  { label: "Maratona", href: "#portfolio" },
   { label: "Studio", href: "#studio" },
   { label: "Contato", href: "#contato" },
 ];
