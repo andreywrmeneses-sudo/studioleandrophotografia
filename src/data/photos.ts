@@ -4,11 +4,12 @@ import run2 from "@/assets/run-2.webp.asset.json";
 import run3 from "@/assets/run-3.webp.asset.json";
 import run4 from "@/assets/run-4.webp.asset.json";
 import run5 from "@/assets/run-5.webp.asset.json";
-import event1 from "@/assets/event-1.jpg";
-import event2 from "@/assets/event-2.jpg";
-import event3 from "@/assets/event-3.jpg";
-import event4 from "@/assets/event-4.jpg";
-import event5 from "@/assets/event-5.jpg";
+import wed1 from "@/assets/casamento-1.jpg.asset.json";
+import wed2 from "@/assets/casamento-2.jpg.asset.json";
+import wed3 from "@/assets/casamento-3.jpg.asset.json";
+import wed4 from "@/assets/casamento-4.jpg.asset.json";
+import wed5 from "@/assets/casamento-5.webp.asset.json";
+import heroic from "@/assets/hero-bombeiro.jpg.asset.json";
 import other1 from "@/assets/other-1.jpg";
 import other2 from "@/assets/other-2.jpg";
 import other3 from "@/assets/other-3.jpg";
@@ -33,7 +34,8 @@ export type Photo = {
 
 export const heroPhoto = hero;
 export const studioPhoto = studio;
-export const editorialPhoto = other4;
+export const editorialPhoto = heroic.url;
+export const weddingHero = wed1.url;
 
 export const sportsPhotos: Photo[] = [
   {
@@ -81,42 +83,42 @@ export const sportsPhotos: Photo[] = [
 export const eventsPhotos: Photo[] = [
   {
     id: "evt-1",
-    src: event1,
-    alt: "Noivos abraçados em luz dourada durante a celebração",
+    src: wed1.url,
+    alt: "Noivos se olhando com carinho durante a cerimônia, cercados pela família",
     category: "Eventos",
     title: "O primeiro abraço",
     caption: "O primeiro abraço.",
   },
   {
     id: "evt-2",
-    src: event2,
-    alt: "Convidados brindando e sorrindo em festa noturna",
+    src: wed2.url,
+    alt: "Noiva sorrindo com o buquê ao lado do noivo durante a recepção",
     category: "Eventos",
-    title: "Brinde",
+    title: "Alegria",
     caption: "Celebração.",
   },
   {
     id: "evt-3",
-    src: event3,
-    alt: "Noiva segurando buquê em luz suave de janela",
+    src: wed3.url,
+    alt: "Casal mostrando as alianças sorrindo ao ar livre após a cerimônia",
     category: "Eventos",
-    title: "Detalhes",
-    caption: "Detalhes.",
+    title: "As alianças",
+    caption: "Detalhes que ficam.",
   },
   {
     id: "evt-4",
-    src: event4,
-    alt: "Criança soprando velas de aniversário",
+    src: wed4.url,
+    alt: "Noiva chegando com o buquê em luz natural",
     category: "Eventos",
-    title: "Aniversários",
+    title: "A chegada",
     caption: "Espontaneidade.",
   },
   {
     id: "evt-5",
-    src: event5,
-    alt: "Casal dançando em salão de festas iluminado",
+    src: wed5.url,
+    alt: "Noivos abraçando um familiar emocionado durante a celebração",
     category: "Eventos",
-    title: "A primeira dança",
+    title: "Família",
     caption: "Conexão.",
   },
 ];

@@ -35,7 +35,7 @@ export function FloatingButtons() {
         href={`https://wa.me/${CONTACT.whatsappDigits}`}
         target="_blank"
         rel="noreferrer noopener"
-        aria-label={`Conversar no WhatsApp ${CONTACT.whatsappLabel}`}
+        aria-label="Conversar no WhatsApp"
         className={base}
         style={{
           animation: "float-soft 4.2s ease-in-out infinite, pulse-ring 3.4s ease-out infinite",
