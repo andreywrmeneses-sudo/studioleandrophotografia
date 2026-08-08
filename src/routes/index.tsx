@@ -176,17 +176,14 @@ function Index() {
             items={[
               {
                 quote: "Fotos que realmente conseguiram transmitir a energia daquele momento.",
-                name: "Nome do cliente",
                 context: "Cobertura esportiva",
               },
               {
                 quote: "Cada detalhe ficou incrível. O resultado superou minhas expectativas.",
-                name: "Nome do cliente",
                 context: "Campeonato",
               },
               {
                 quote: "Profissionalismo do início ao fim.",
-                name: "Nome do cliente",
                 context: "Equipe esportiva",
               },
             ]}
@@ -265,17 +262,14 @@ function Index() {
                 items={[
                   {
                     quote: "Sentimos que o dia foi contado exatamente como ele aconteceu.",
-                    name: "Nome do cliente",
                     context: "Casamento",
                   },
                   {
                     quote: "As fotos guardaram detalhes que a gente nem percebeu na hora.",
-                    name: "Nome do cliente",
                     context: "Aniversário",
                   },
                   {
                     quote: "Discrição total durante a festa e um resultado impecável.",
-                    name: "Nome do cliente",
                     context: "Evento social",
                   },
                 ]}
@@ -290,16 +284,10 @@ function Index() {
             <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
               <SectionHeader
                 index="04"
-                eyebrow="Outros trabalhos"
-                title="Além do momento."
-                text="Retratos, ensaios, fotografia urbana, lifestyle e projetos especiais — o portfólio que não cabe em uma única categoria."
+                eyebrow="Fotos de Maratonas"
+                title="Cada esforço valeu a pena."
+                text="Na maratona, a fotografia é o troféu que fica. É ela que guarda o suor do percurso, o alívio da linha de chegada e a medalha erguida — a prova visível de que cada treino, cada quilômetro e cada superação tiveram sentido."
               />
-              <Reveal delay={120}>
-                <p className="text-sm leading-relaxed text-muted-foreground lg:pb-3">
-                  Uma seleção livre, feita para mostrar direção de luz, tratamento e a forma como o
-                  studio traduz uma ideia em imagem.
-                </p>
-              </Reveal>
             </div>
           </div>
 
@@ -307,7 +295,8 @@ function Index() {
             <GalleryCarousel
               photos={beyondPhotos}
               variant="offset"
-              label="Galeria de retratos, ensaios e projetos especiais"
+              variantArrows="prominent"
+              label="Galeria de fotografias de maratonas"
             />
           </div>
         </section>

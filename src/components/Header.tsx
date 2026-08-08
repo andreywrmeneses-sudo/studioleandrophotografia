@@ -6,7 +6,7 @@ const NAV = [
   { label: "Início", href: "#inicio" },
   { label: "Fotografia Esportiva", href: "#esportes" },
   { label: "Eventos", href: "#eventos" },
-  { label: "Portfólio", href: "#portfolio" },
+  { label: "Maratona", href: "#portfolio" },
   { label: "Studio", href: "#studio" },
   { label: "Contato", href: "#contato" },
 ];
