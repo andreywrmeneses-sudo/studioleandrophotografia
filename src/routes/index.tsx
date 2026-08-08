@@ -295,7 +295,8 @@ function Index() {
             <GalleryCarousel
               photos={beyondPhotos}
               variant="offset"
-              label="Galeria de retratos, ensaios e projetos especiais"
+              variantArrows="prominent"
+              label="Galeria de fotografias de maratonas"
             />
           </div>
         </section>
