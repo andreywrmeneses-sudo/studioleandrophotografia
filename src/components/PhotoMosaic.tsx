@@ -35,10 +35,18 @@ export function PhotoMosaic({ photos }: { photos: Photo[] }) {
             >
               <img
                 src={photo.src}
+                alt=""
+                aria-hidden
+                loading="lazy"
+                decoding="async"
+                className="absolute inset-0 h-full w-full scale-110 object-cover opacity-45 blur-2xl"
+              />
+              <img
+                src={photo.src}
                 alt={photo.alt}
                 loading="lazy"
                 decoding="async"
-                className="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]"
+                className="relative h-full w-full object-contain object-top transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]"
               />
               <span className="absolute inset-0 bg-graphite/25 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <span className="absolute inset-0 rounded-xl ring-0 ring-primary/0 transition-all duration-500 group-hover:ring-1 group-hover:ring-primary/45 group-hover:shadow-[0_0_46px_-12px_var(--color-cyan-signature)]" />
