@@ -6,13 +6,13 @@ import { Reveal } from "./Reveal";
 const spans = [
   "sm:col-span-4 sm:row-span-2",
   "sm:col-span-2 sm:row-span-1",
-  "sm:col-span-2 sm:row-span-2",
   "sm:col-span-2 sm:row-span-1",
-  "sm:col-span-3 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-2",
+  "sm:col-span-2 sm:row-span-2",
+  "sm:col-span-2 sm:row-span-2",
   "sm:col-span-3 sm:row-span-2",
-  "sm:col-span-2 sm:row-span-1",
-  "sm:col-span-2 sm:row-span-2",
-  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-3 sm:row-span-1",
+  "sm:col-span-3 sm:row-span-1",
 ];
 
 export function PhotoMosaic({ photos }: { photos: Photo[] }) {
@@ -20,7 +20,7 @@ export function PhotoMosaic({ photos }: { photos: Photo[] }) {
 
   return (
     <>
-      <div className="grid auto-rows-[42vw] grid-cols-1 gap-3 sm:auto-rows-[11vw] sm:grid-cols-6 sm:gap-4">
+      <div className="grid auto-rows-[42vw] grid-flow-row-dense grid-cols-1 gap-3 sm:auto-rows-[11vw] sm:grid-cols-6 sm:gap-4">
         {photos.map((photo, i) => (
           <Reveal
             key={photo.id}
