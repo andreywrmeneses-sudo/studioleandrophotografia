@@ -113,7 +113,7 @@ function Index() {
                   src={sportsPhotos[0]?.src}
                   alt="Fotografia esportiva capturando o instante decisivo de uma partida"
                   loading="lazy"
-                  className="aspect-[16/10] w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.03]"
+                  className="h-auto w-full object-contain transition-transform duration-[1.4s] ease-out group-hover:scale-[1.03]"
                 />
               </figure>
             </Reveal>
@@ -131,7 +131,7 @@ function Index() {
                     src={eventsPhotos[2]?.src}
                     alt="Detalhe delicado registrado durante um evento"
                     loading="lazy"
-                    className="aspect-[4/3] w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.03]"
+                    className="h-auto w-full object-contain transition-transform duration-[1.4s] ease-out group-hover:scale-[1.03]"
                   />
                 </figure>
               </div>
@@ -370,9 +370,7 @@ function Index() {
                 <MessageCircle className="mt-1 h-5 w-5 shrink-0 text-primary" />
                 <span className="min-w-0">
                   <span className="eyebrow block">WhatsApp</span>
-                  <span className="mt-2 block text-center text-lg tracking-[0.4em] text-foreground">
-                    •••
-                  </span>
+                  <span className="mt-2 block text-sm text-foreground">{CONTACT.whatsappLabel}</span>
                 </span>
               </a>
               <a

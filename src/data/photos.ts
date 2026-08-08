@@ -31,6 +31,8 @@ export type Photo = {
   description?: string;
   caption?: string;
   featured?: boolean;
+  /** "cover" preenche a caixa focando no centro; padrão mostra a foto inteira */
+  fit?: "cover" | "contain";
 };
 
 export const heroPhoto = hero;
@@ -89,6 +91,7 @@ export const eventsPhotos: Photo[] = [
     category: "Eventos",
     title: "O primeiro abraço",
     caption: "O primeiro abraço.",
+    fit: "cover",
   },
   {
     id: "evt-2",
@@ -97,6 +100,7 @@ export const eventsPhotos: Photo[] = [
     category: "Eventos",
     title: "Alegria",
     caption: "Celebração.",
+    fit: "cover",
   },
   {
     id: "evt-3",

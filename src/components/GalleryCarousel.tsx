@@ -115,7 +115,9 @@ export function GalleryCarousel({
                 alt={photo.alt}
                 loading="lazy"
                 decoding="async"
-                className="relative h-full w-full object-contain object-top transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]"
+                className={`relative h-full w-full transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03] ${
+                  photo.fit === "cover" ? "object-cover object-center" : "object-contain object-top"
+                }`}
               />
               <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-graphite/70 via-transparent to-transparent" />
               <span className="glass absolute right-3 bottom-3 grid h-9 w-9 place-items-center rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100">
