@@ -28,7 +28,7 @@ export function Hero() {
 
       <div className="relative mx-auto flex h-full max-w-[1400px] flex-col justify-end px-4 pb-20 sm:px-8 sm:pb-24">
         <h1
-          className="text-display max-w-4xl text-[clamp(2.4rem,7.5vw,5.6rem)] font-bold text-foreground"
+          className="text-display max-w-4xl text-[clamp(2rem,6vw,4.4rem)] font-bold text-foreground"
           style={{ animation: "blur-in 1.1s cubic-bezier(.2,.7,.2,1) .25s both" }}
         >
           Momentos que merecem ser eternizados.
