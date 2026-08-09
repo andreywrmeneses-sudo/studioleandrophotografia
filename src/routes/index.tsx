@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Instagram, Mail, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Instagram, Mail, MapPin, MessageCircle } from "lucide-react";
 
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
@@ -385,10 +385,18 @@ function Index() {
                   </span>
                 </span>
               </a>
-              <div className="glass rounded-2xl p-6">
-                <span className="eyebrow block">Endereço</span>
-                <span className="mt-2 block text-sm text-foreground">{CONTACT.address}</span>
-              </div>
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CONTACT.address)}`}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="glass glass-hover flex items-start gap-4 rounded-2xl p-6"
+              >
+                <MapPin className="mt-1 h-5 w-5 shrink-0 text-primary" />
+                <span className="min-w-0">
+                  <span className="eyebrow block">Endereço</span>
+                  <span className="mt-2 block text-sm text-foreground">{CONTACT.address}</span>
+                </span>
+              </a>
             </div>
           </div>
         </section>
