@@ -242,6 +242,9 @@ function Index() {
                   src={weddingHero}
                   alt="Noivos se olhando com carinho durante a cerimônia, cercados pela família"
                   loading="lazy"
+                  decoding="async"
+                  width={1920}
+                  height={1080}
                   className="aspect-[21/9] w-full object-cover"
                 />
               </figure>

@@ -5,6 +5,7 @@ import run3 from "@/assets/run-3.webp.asset.json";
 import run4 from "@/assets/run-4.webp.asset.json";
 import run5 from "@/assets/run-5.webp.asset.json";
 import wed1 from "@/assets/casamento-1.jpg.asset.json";
+import wed1hd from "@/assets/casamento-1-4k.jpg.asset.json";
 import wed2 from "@/assets/casamento-2.jpg.asset.json";
 import wed3 from "@/assets/casamento-3.jpg.asset.json";
 import wed4 from "@/assets/casamento-4.jpg.asset.json";
@@ -40,7 +41,7 @@ export type Photo = {
 export const heroPhoto = hero;
 export const studioPhoto = studio;
 export const editorialPhoto = heroic.url;
-export const weddingHero = wed1.url;
+export const weddingHero = wed1hd.url;
 
 export const sportsPhotos: Photo[] = [
   {
