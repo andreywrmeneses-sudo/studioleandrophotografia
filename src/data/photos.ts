@@ -195,5 +195,6 @@ export const CONTACT = {
   email: "Studioleandrophotografia@gmail.com",
   instagram: "https://www.instagram.com/lleandrofotos/",
   instagramLabel: "@lleandrofotos",
-  address: "Avenida dos Franceses, Bairro Santo Antônio, Nº 4",
+  address:
+    "Avenida dos Franceses, Bairro Santo Antônio, Nº 4, CEP: 65036284, São Luís, Maranhão",
 };
