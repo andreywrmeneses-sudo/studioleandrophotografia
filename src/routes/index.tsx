@@ -57,8 +57,11 @@ export const Route = createFileRoute("/")({
           sameAs: [CONTACT.instagram],
           address: {
             "@type": "PostalAddress",
-            streetAddress: "Avenida dos Franceses, Nº 4",
-            addressLocality: "Bairro Santo Antônio",
+            streetAddress: "Avenida dos Franceses, Nº 4, Bairro Santo Antônio",
+            addressLocality: "São Luís",
+            addressRegion: "MA",
+            postalCode: "65036-284",
+            addressCountry: "BR",
           },
           openingHoursSpecification: [
             {

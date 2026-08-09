@@ -3,7 +3,7 @@ import { CONTACT, studioPhoto } from "@/data/photos";
 import { Reveal } from "./Reveal";
 
 const QUERY = encodeURIComponent(
-  "Avenida dos Franceses, Bairro Santo Antônio, 4, São Luís - MA",
+  "Avenida dos Franceses, Nº 4, Bairro Santo Antônio, São Luís - MA, 65036-284",
 );
 
 export function StudioLocation() {
