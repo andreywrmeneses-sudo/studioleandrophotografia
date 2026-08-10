@@ -15,7 +15,7 @@ import { ScrollProgress } from "@/components/ScrollProgress";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { Parallax } from "@/components/Parallax";
-import leandroPhoto from "@/assets/leandro.png.asset.json";
+import leandroPhoto from "@/assets/leandro.webp.asset.json";
 import {
   CONTACT,
   bestOfMonthPhotos,
