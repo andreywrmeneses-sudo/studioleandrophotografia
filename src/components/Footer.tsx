@@ -1,5 +1,5 @@
 import { Instagram, Mail, MapPin, MessageCircle } from "lucide-react";
-import logo from "@/assets/logo.png.asset.json";
+import logo from "@/assets/logo.webp.asset.json";
 import { CONTACT } from "@/data/photos";
 
 const LINKS = [
