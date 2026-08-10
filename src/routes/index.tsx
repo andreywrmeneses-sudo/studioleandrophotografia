@@ -14,6 +14,7 @@ import { FloatingButtons } from "@/components/FloatingButtons";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
+import { Parallax } from "@/components/Parallax";
 import leandroPhoto from "@/assets/leandro.png.asset.json";
 import {
   CONTACT,
@@ -114,23 +115,27 @@ function Index() {
           <div className="mt-16 grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
             <Reveal>
               <blockquote className="glass rounded-3xl p-8 sm:p-10">
+                <Parallax strength={14}>
                 <span className="eyebrow text-primary">Leandro</span>
                 <p className="text-display mt-5 text-2xl leading-snug text-foreground sm:text-3xl">
                   “Sou um fotógrafo com muito amor e dedicação ao meu trabalho. Sempre estou
                   registrando tudo e guardando as maiores e inesquecíveis lembranças!”
                 </p>
+                </Parallax>
               </blockquote>
             </Reveal>
 
             <Reveal delay={140}>
-              <figure className="overflow-hidden rounded-3xl">
-                <img
-                  src={leandroPhoto.url}
-                  alt="Leandro, fotógrafo do Studio Leandro Photografia, sorrindo com a câmera no colo"
-                  loading="lazy"
-                  className="h-auto w-full object-contain"
-                />
-              </figure>
+              <Parallax strength={34}>
+                <figure className="overflow-hidden rounded-3xl">
+                  <img
+                    src={leandroPhoto.url}
+                    alt="Leandro, fotógrafo do Studio Leandro Photografia, sorrindo com a câmera no colo"
+                    loading="lazy"
+                    className="h-auto w-full object-contain"
+                  />
+                </figure>
+              </Parallax>
             </Reveal>
           </div>
 
