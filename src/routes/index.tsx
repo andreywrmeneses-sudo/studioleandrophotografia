@@ -14,6 +14,7 @@ import { FloatingButtons } from "@/components/FloatingButtons";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
+import leandroPhoto from "@/assets/leandro.png.asset.json";
 import {
   CONTACT,
   bestOfMonthPhotos,
@@ -105,34 +106,31 @@ function Index() {
         <section className="mx-auto max-w-[1400px] px-4 py-28 sm:px-8 sm:py-36">
           <SectionHeader
             index="01"
-            eyebrow="O Studio"
+            eyebrow="A Mente por detrás do Studio"
             title="Mais do que fotografar. Contar histórias."
             text="O trabalho do Studio Leandro Photografia nasce da atenção ao que acontece entre um quadro e outro: a emoção, o movimento, a personalidade de quem está diante da lente, os detalhes que passam despercebidos e os momentos espontâneos que ninguém planeja."
           />
 
-          <div className="mt-16 grid gap-8 lg:grid-cols-[1.35fr_1fr] lg:items-end">
+          <div className="mt-16 grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
             <Reveal>
-              <figure className="group overflow-hidden rounded-3xl">
-                <img
-                  src={sportsPhotos[0]?.src}
-                  alt="Fotografia esportiva capturando o instante decisivo de uma partida"
-                  loading="lazy"
-                  className="h-auto w-full object-contain transition-transform duration-[1.4s] ease-out group-hover:scale-[1.03]"
-                />
-              </figure>
+              <blockquote className="glass rounded-3xl p-8 sm:p-10">
+                <span className="eyebrow text-primary">Leandro</span>
+                <p className="text-display mt-5 text-2xl leading-snug text-foreground sm:text-3xl">
+                  “Sou um fotógrafo com muito amor e dedicação ao meu trabalho. Sempre estou
+                  registrando tudo e guardando as maiores e inesquecíveis lembranças!”
+                </p>
+              </blockquote>
             </Reveal>
 
             <Reveal delay={140}>
-              <div className="flex flex-col gap-8">
-                <figure className="group overflow-hidden rounded-3xl">
-                  <img
-                    src={eventsPhotos[2]?.src}
-                    alt="Detalhe delicado registrado durante um evento"
-                    loading="lazy"
-                    className="h-auto w-full object-contain transition-transform duration-[1.4s] ease-out group-hover:scale-[1.03]"
-                  />
-                </figure>
-              </div>
+              <figure className="overflow-hidden rounded-3xl">
+                <img
+                  src={leandroPhoto.url}
+                  alt="Leandro, fotógrafo do Studio Leandro Photografia, sorrindo com a câmera no colo"
+                  loading="lazy"
+                  className="h-auto w-full object-contain"
+                />
+              </figure>
             </Reveal>
           </div>
 
