@@ -111,7 +111,7 @@ export function GalleryCarousel({
                 aria-hidden
                 loading="lazy"
                 decoding="async"
-                className="absolute inset-0 h-full w-full scale-110 object-cover opacity-45 blur-2xl"
+                className="absolute inset-0 h-full w-full scale-110 object-cover opacity-20 blur-xl brightness-75"
               />
               <img
                 src={photo.src}

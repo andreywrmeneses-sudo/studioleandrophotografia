@@ -29,20 +29,20 @@ export function Hero() {
       <div className="relative mx-auto flex h-full max-w-[1400px] flex-col justify-end px-4 pb-20 sm:px-8 sm:pb-24">
         <h1
           className="text-display max-w-4xl text-[clamp(2rem,6vw,4.4rem)] font-bold text-foreground"
-          style={{ animation: "blur-in 1.1s cubic-bezier(.2,.7,.2,1) .25s both" }}
+          style={{ animation: "blur-in .55s cubic-bezier(.2,.7,.2,1) .08s both" }}
         >
           Momentos que merecem ser eternizados.
         </h1>
         <p
           className="mt-6 max-w-xl text-base text-ash sm:text-lg"
-          style={{ animation: "blur-in 1.1s cubic-bezier(.2,.7,.2,1) .45s both" }}
+          style={{ animation: "blur-in .55s cubic-bezier(.2,.7,.2,1) .18s both" }}
         >
           Fotografia profissional para esportes, eventos e histórias que merecem ser lembradas.
         </p>
 
         <div
           className="mt-9 flex flex-wrap items-center gap-3"
-          style={{ animation: "blur-in 1.1s cubic-bezier(.2,.7,.2,1) .6s both" }}
+          style={{ animation: "blur-in .55s cubic-bezier(.2,.7,.2,1) .26s both" }}
         >
           <a
             href="#contato"

@@ -34,9 +34,9 @@ export function Reveal({
       className={className}
       style={{
         opacity: shown ? 1 : 0,
-        filter: shown ? "blur(0)" : "blur(10px)",
-        transform: shown ? "translateY(0)" : "translateY(26px)",
-        transition: `opacity .9s cubic-bezier(.2,.7,.2,1) ${delay}ms, transform .9s cubic-bezier(.2,.7,.2,1) ${delay}ms, filter .9s ease ${delay}ms`,
+        filter: shown ? "blur(0)" : "blur(5px)",
+        transform: shown ? "translateY(0)" : "translateY(16px)",
+        transition: `opacity .45s cubic-bezier(.2,.7,.2,1) ${delay}ms, transform .45s cubic-bezier(.2,.7,.2,1) ${delay}ms, filter .35s ease ${delay}ms`,
       }}
     >
       {children}

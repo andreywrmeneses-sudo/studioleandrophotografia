@@ -98,7 +98,7 @@ export function Lightbox({
       <figure
         className="max-h-[88vh] w-full max-w-5xl"
         onClick={(e) => e.stopPropagation()}
-        style={{ animation: "blur-in .5s ease both" }}
+        style={{ animation: "blur-in .3s ease both" }}
       >
         <img
           src={photo.src}
