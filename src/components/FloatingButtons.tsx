@@ -25,7 +25,7 @@ export function FloatingButtons() {
           animation: "float-soft 5s ease-in-out infinite, pulse-ring 3.4s ease-out infinite",
         }}
       >
-        <Instagram className="h-7 w-7 text-highlight" />
+        <Instagram className="h-7 w-7 text-highlight [filter:drop-shadow(0_0_6px_var(--color-highlight))_drop-shadow(0_0_14px_color-mix(in_oklab,var(--color-highlight)_60%,transparent))]" />
         <span className="glass pointer-events-none absolute right-full mr-3 hidden rounded-full px-3 py-1.5 text-xs whitespace-nowrap opacity-0 transition-opacity duration-300 group-hover:opacity-100 sm:block">
           Instagram
         </span>
@@ -41,7 +41,7 @@ export function FloatingButtons() {
           animation: "float-soft 4.2s ease-in-out infinite, pulse-ring 3.4s ease-out infinite",
         }}
       >
-        <WhatsAppIcon className="h-8 w-8 text-highlight" />
+        <WhatsAppIcon className="h-8 w-8 text-highlight [filter:drop-shadow(0_0_6px_var(--color-highlight))_drop-shadow(0_0_14px_color-mix(in_oklab,var(--color-highlight)_60%,transparent))]" />
         <span className="glass pointer-events-none absolute right-full mr-3 hidden rounded-full px-3 py-1.5 text-xs whitespace-nowrap opacity-0 transition-opacity duration-300 group-hover:opacity-100 sm:block">
           WhatsApp
         </span>
