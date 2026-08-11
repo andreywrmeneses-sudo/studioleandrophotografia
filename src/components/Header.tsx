@@ -68,7 +68,7 @@ export function Header() {
         <div className="flex items-center justify-end gap-3">
           <a
             href="#contato"
-            className="hidden rounded-full border border-white/8 bg-black/55 px-5 py-2.5 text-[13px] text-foreground backdrop-blur-md backdrop-saturate-150 transition-colors duration-300 hover:border-primary/40 hover:text-primary lg:block"
+            className="hidden rounded-full border border-white/8 bg-black/55 px-5 py-2.5 text-[13px] text-foreground backdrop-blur-md backdrop-saturate-150 transition-colors duration-300 hover:border-highlight/50 hover:text-highlight lg:block"
           >
             Solicitar orçamento
           </a>
@@ -114,7 +114,7 @@ export function Header() {
           <a
             href="#contato"
             onClick={() => setOpen(false)}
-            className="mt-3 block rounded-full bg-primary px-5 py-3 text-center text-sm font-semibold text-primary-foreground"
+            className="mt-3 block rounded-full bg-highlight px-5 py-3 text-center text-sm font-semibold text-highlight-foreground"
           >
             Solicitar orçamento
           </a>

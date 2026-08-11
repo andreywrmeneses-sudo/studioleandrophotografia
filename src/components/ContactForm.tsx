@@ -194,7 +194,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={!consent}
-        className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground shadow-[0_18px_50px_-20px_var(--color-cyan-signature)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary hover:text-foreground focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:bg-primary disabled:hover:text-primary-foreground sm:w-auto"
+        className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-highlight px-8 py-4 text-sm font-semibold text-highlight-foreground shadow-[0_18px_50px_-20px_var(--color-highlight)] transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110 focus-visible:ring-2 focus-visible:ring-highlight focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:brightness-100 sm:w-auto"
       >
         <Send className="h-4 w-4" />
         Enviar proposta
