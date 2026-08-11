@@ -25,7 +25,7 @@ export function FloatingButtons() {
           animation: "float-soft 5s ease-in-out infinite, pulse-ring 3.4s ease-out infinite",
         }}
       >
-        <Instagram className="h-7 w-7 text-primary" />
+        <Instagram className="h-7 w-7 text-highlight" />
         <span className="glass pointer-events-none absolute right-full mr-3 hidden rounded-full px-3 py-1.5 text-xs whitespace-nowrap opacity-0 transition-opacity duration-300 group-hover:opacity-100 sm:block">
           Instagram
         </span>
@@ -41,7 +41,7 @@ export function FloatingButtons() {
           animation: "float-soft 4.2s ease-in-out infinite, pulse-ring 3.4s ease-out infinite",
         }}
       >
-        <WhatsAppIcon className="h-8 w-8 text-primary" />
+        <WhatsAppIcon className="h-8 w-8 text-highlight" />
         <span className="glass pointer-events-none absolute right-full mr-3 hidden rounded-full px-3 py-1.5 text-xs whitespace-nowrap opacity-0 transition-opacity duration-300 group-hover:opacity-100 sm:block">
           WhatsApp
         </span>
