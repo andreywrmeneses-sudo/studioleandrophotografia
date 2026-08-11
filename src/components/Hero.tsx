@@ -46,7 +46,7 @@ export function Hero() {
         >
           <a
             href="#contato"
-            className="rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-[0_18px_50px_-18px_var(--color-cyan-signature)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary hover:text-foreground focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-graphite focus-visible:outline-none"
+            className="rounded-full bg-highlight px-7 py-3.5 text-sm font-semibold text-highlight-foreground shadow-[0_18px_50px_-18px_var(--color-highlight)] transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110 focus-visible:ring-2 focus-visible:ring-highlight focus-visible:ring-offset-2 focus-visible:ring-offset-graphite focus-visible:outline-none"
           >
             Solicitar orçamento
           </a>

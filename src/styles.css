@@ -11,7 +11,9 @@
   --color-cyan-deep: oklch(0.55 0.1 216);
   --color-midnight: oklch(0.27 0.03 197);
   --color-graphite: oklch(0.19 0 0);
-  --color-gold: oklch(0.81 0.13 78);
+  --color-gold: oklch(0.808 0.132 76.5);
+  --color-highlight: oklch(0.808 0.132 76.5);
+  --color-highlight-foreground: oklch(0.18 0.02 60);
   --color-mist: oklch(0.97 0.004 210);
   --color-ash: oklch(0.71 0.014 220);
 }

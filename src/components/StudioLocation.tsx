@@ -2,9 +2,8 @@ import { MapPin, Navigation } from "lucide-react";
 import { CONTACT, studioPhoto } from "@/data/photos";
 import { Reveal } from "./Reveal";
 
-const QUERY = encodeURIComponent(
-  "Avenida dos Franceses, Nº 4, Bairro Santo Antônio, São Luís - MA, 65036-284",
-);
+const COORDS = "-2.5605744,-44.2582188";
+const QUERY = encodeURIComponent(COORDS);
 
 export function StudioLocation() {
   return (
@@ -13,7 +12,7 @@ export function StudioLocation() {
         <div className="relative overflow-hidden rounded-3xl border border-white/10">
           <iframe
             title="Mapa da localização do Studio Leandro Photografia"
-            src={`https://www.google.com/maps?q=${QUERY}&z=18&t=m&output=embed`}
+            src={`https://www.google.com/maps?q=${QUERY}&z=19&t=m&output=embed`}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             className="h-[320px] w-full sm:h-[460px]"
