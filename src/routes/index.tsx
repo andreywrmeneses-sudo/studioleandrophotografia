@@ -127,7 +127,7 @@ function Index() {
 
             <Reveal delay={140}>
               <Parallax strength={34}>
-                <figure className="overflow-hidden rounded-3xl">
+                <figure className="overflow-hidden rounded-[2rem] bg-[var(--color-cyan-signature)]">
                   <img
                     src={leandroPhoto.url}
                     alt="Leandro, fotógrafo do Studio Leandro Photografia, sorrindo com a câmera no colo"
