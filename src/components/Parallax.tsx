@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
 /** Deslocamento vertical sutil conforme o elemento cruza a viewport. */
 export function Parallax({
