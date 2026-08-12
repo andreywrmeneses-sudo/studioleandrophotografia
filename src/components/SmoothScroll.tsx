@@ -1,3 +1,4 @@
+import "lenis/dist/lenis.css";
 import { useEffect } from "react";
 
 /** Rolagem suave global (inércia sutil), desativada em reduced-motion. */
