@@ -129,7 +129,7 @@ export const eventsPhotos: Photo[] = [
     title: "Família",
     caption: "Conexão.",
     fit: "cover",
-    focus: "object-[50%_35%]",
+    focus: "object-[50%_18%]",
   },
 ];
 
