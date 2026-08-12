@@ -4,10 +4,14 @@ export function Reveal({
   children,
   delay = 0,
   className = "",
+  direction = "up",
+  distance = 28,
 }: {
   children: ReactNode;
   delay?: number;
   className?: string;
+  direction?: "up" | "down" | "left" | "right" | "none";
+  distance?: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [shown, setShown] = useState(false);
@@ -15,6 +19,10 @@ export function Reveal({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setShown(true);
+      return;
+    }
     const io = new IntersectionObserver(
       (entries) => {
         if (entries[0]?.isIntersecting) {
@@ -22,11 +30,22 @@ export function Reveal({
           io.disconnect();
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+      { threshold: 0.05, rootMargin: "0px 0px -10% 0px" },
     );
     io.observe(el);
     return () => io.disconnect();
   }, []);
+
+  const hidden =
+    direction === "none"
+      ? "translate3d(0,0,0) scale(0.985)"
+      : direction === "left"
+        ? `translate3d(-${distance}px,0,0)`
+        : direction === "right"
+          ? `translate3d(${distance}px,0,0)`
+          : direction === "down"
+            ? `translate3d(0,-${distance}px,0)`
+            : `translate3d(0,${distance}px,0)`;
 
   return (
     <div
@@ -34,9 +53,9 @@ export function Reveal({
       className={className}
       style={{
         opacity: shown ? 1 : 0,
-        filter: shown ? "blur(0)" : "blur(5px)",
-        transform: shown ? "translateY(0)" : "translateY(16px)",
-        transition: `opacity .45s cubic-bezier(.2,.7,.2,1) ${delay}ms, transform .45s cubic-bezier(.2,.7,.2,1) ${delay}ms, filter .35s ease ${delay}ms`,
+        transform: shown ? "translate3d(0,0,0) scale(1)" : hidden,
+        willChange: shown ? "auto" : "transform, opacity",
+        transition: `opacity .8s cubic-bezier(.16,1,.3,1) ${delay}ms, transform .9s cubic-bezier(.16,1,.3,1) ${delay}ms`,
       }}
     >
       {children}
