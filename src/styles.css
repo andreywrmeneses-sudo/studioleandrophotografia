@@ -252,27 +252,6 @@
   }
 }
 
-@keyframes rise-in {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 26px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-/* Rolagem suave via Lenis: desliga o smooth nativo para evitar conflito */
-html.lenis-active {
-  scroll-behavior: auto;
-}
-
-html.lenis-active,
-html.lenis-active body {
-  overscroll-behavior-y: none;
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
