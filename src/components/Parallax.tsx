@@ -12,43 +12,39 @@ export function Parallax({
   className?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const [offset, setOffset] = useState(0);
+  const inner = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const el = ref.current;
-    if (!el) return;
+    const target = inner.current;
+    if (!el || !target) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     let frame = 0;
-    const update = () => {
-      frame = 0;
+    let current = 0;
+    let goal = 0;
+
+    const loop = () => {
       const rect = el.getBoundingClientRect();
       const vh = window.innerHeight || 1;
       // -1 (abaixo da tela) .. 1 (acima da tela)
       const progress = (rect.top + rect.height / 2 - vh / 2) / (vh / 2 + rect.height / 2);
-      setOffset(Math.max(-1, Math.min(1, progress)) * strength);
-    };
-    const onScroll = () => {
-      if (!frame) frame = requestAnimationFrame(update);
+      goal = Math.max(-1, Math.min(1, progress)) * strength;
+      // interpolação (lerp) para um movimento contínuo e sem trancos
+      current += (goal - current) * 0.08;
+      target.style.transform = `translate3d(0, ${current.toFixed(2)}px, 0)`;
+      frame = requestAnimationFrame(loop);
     };
 
-    update();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => {
-      if (frame) cancelAnimationFrame(frame);
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
+    frame = requestAnimationFrame(loop);
+    return () => cancelAnimationFrame(frame);
   }, [strength]);
 
   return (
-    <div
-      ref={ref}
-      className={className}
-      style={{ transform: `translate3d(0, ${offset.toFixed(2)}px, 0)`, willChange: "transform" }}
-    >
-      {children}
+    <div ref={ref} className={className}>
+      <div ref={inner} style={{ willChange: "transform" }}>
+        {children}
+      </div>
     </div>
   );
 }
