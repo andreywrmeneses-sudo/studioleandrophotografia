@@ -95,7 +95,7 @@ export function GalleryCarousel({
               variant === "portrait"
                 ? "w-[78%] sm:w-[46%] lg:w-[30%]"
                 : variant === "offset"
-                  ? `w-[86%] sm:w-[62%] lg:w-[48%] ${i % 2 ? "lg:mt-14" : ""}`
+                  ? "w-[86%] sm:w-[62%] lg:w-[48%]"
                   : "w-[88%] sm:w-[70%] lg:w-[58%]"
             }`}
           >
