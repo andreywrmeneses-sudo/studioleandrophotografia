@@ -15,6 +15,7 @@ export function SmoothScroll() {
         easing: (t: number) => 1 - Math.pow(1 - t, 3),
         smoothWheel: true,
         touchMultiplier: 1.6,
+        anchors: { offset: -80 },
       });
       lenis = instance;
       document.documentElement.classList.add("lenis-active");
