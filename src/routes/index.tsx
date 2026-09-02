@@ -15,7 +15,7 @@ import { ScrollProgress } from "@/components/ScrollProgress";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { Parallax } from "@/components/Parallax";
-import leandroPhoto from "@/assets/leandro.webp.asset.json";
+import leandroPhoto from "@/assets/leandro.webp";
 import {
   CONTACT,
   bestOfMonthPhotos,
@@ -129,7 +129,7 @@ function Index() {
               <Parallax strength={34}>
                 <figure className="overflow-hidden rounded-[2rem] bg-[var(--color-cyan-signature)]">
                   <img
-                    src={leandroPhoto.url}
+                    src={leandroPhoto}
                     alt="Leandro, fotógrafo do Studio Leandro Photografia, sorrindo com a câmera no colo"
                     loading="lazy"
                     className="h-auto w-full object-contain"

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.webp.asset.json";
+import logo from "@/assets/logo.webp";
 
 const NAV = [
   { label: "Início", href: "#inicio" },
@@ -42,7 +42,7 @@ export function Header() {
           aria-label="Studio Leandro Photografia — ir para o início"
         >
           <img
-            src={logo.url}
+            src={logo}
             alt="Studio Leandro Photografia"
             className={`w-auto transition-all duration-500 ${scrolled ? "h-7 sm:h-8" : "h-8 sm:h-11"}`}
           />

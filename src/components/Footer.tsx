@@ -1,5 +1,5 @@
 import { Instagram, Mail, MapPin, MessageCircle } from "lucide-react";
-import logo from "@/assets/logo.webp.asset.json";
+import logo from "@/assets/logo.webp";
 import { CONTACT } from "@/data/photos";
 
 const LINKS = [
@@ -18,7 +18,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-[1400px] gap-12 px-4 py-16 sm:px-8 lg:grid-cols-[1.3fr_0.7fr_1fr]">
         <div>
           <img
-            src={logo.url}
+            src={logo}
             alt="Studio Leandro Photografia"
             className="h-20 w-auto"
             loading="lazy"
